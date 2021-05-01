@@ -3,7 +3,13 @@ const commando = require('discord.js-commando');
 const path = require('path');
 const oneLine = require('common-tags').oneLine;
 const sqlite = require('sqlite');
-const token = 'NTc2NTkzMzY1NTcxNzMxNDY2.XNYwag.c_3TuK6enWglR9PifUi_jV2eb1k';
+const fs = require('fs')
+token = '';
+fs.readFile('Input.txt', (err, data) => {
+    if (err) throw err;
+  
+    token = data.toString();
+})
 
 const client = new commando.Client({
   owner: '90997305578106880',
