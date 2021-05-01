@@ -2,7 +2,7 @@
 const commando = require('discord.js-commando');
 const path = require('path');
 const oneLine = require('common-tags').oneLine;
-const sqlite = require('sqlite');
+//const sqlite = require('sqlite');
 const fs = require('fs')
 token = '';
 fs.readFile('botcode.txt', (err, data) => {
@@ -10,7 +10,7 @@ fs.readFile('botcode.txt', (err, data) => {
   
     token = data.toString();
 })
-
+/*
 const client = new commando.Client({
   owner: '90997305578106880',
   commandPrefix: 'cdev'
@@ -54,12 +54,12 @@ client
 			${enabled ? 'enabled' : 'disabled'}
 			${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.
 		`);
-  });
-
+  });*/
+/*
 client.setProvider(
   sqlite.open(path.join(__dirname, 'database.sqlite3')).then(db => new commando.SQLiteProvider(db))
 ).catch(console.error);
-
+*/
 client.registry
   .registerGroup('math', 'Math')
   .registerDefaults()

@@ -24,3 +24,6 @@ hs_err_pid*
 
 #discordBotKey
 botcode.txt
+
+#node modules
+node_modules/*
