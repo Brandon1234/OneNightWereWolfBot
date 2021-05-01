@@ -5,7 +5,7 @@ const oneLine = require('common-tags').oneLine;
 const sqlite = require('sqlite');
 const fs = require('fs')
 token = '';
-fs.readFile('Input.txt', (err, data) => {
+fs.readFile('botcode.txt', (err, data) => {
     if (err) throw err;
   
     token = data.toString();
