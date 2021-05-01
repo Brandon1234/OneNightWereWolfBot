@@ -1,14 +1,22 @@
 /* eslint-disable no-console */
-const commando = require('discord.js-commando');
+const Discord = require('discord.js');
 const path = require('path');
 const oneLine = require('common-tags').oneLine;
 //const sqlite = require('sqlite');
 const fs = require('fs')
 token = '';
+
+const client = new Discord.Client();
+
+client.once('ready', () => {
+	console.log('Ready!');
+});
+
 fs.readFile('botcode.txt', (err, data) => {
-    if (err) throw err;
+  if (err) throw err;
+  token = data.toString();
   
-    token = data.toString();
+  client.login(token);
 })
 /*
 const client = new commando.Client({
@@ -59,11 +67,9 @@ client
 client.setProvider(
   sqlite.open(path.join(__dirname, 'database.sqlite3')).then(db => new commando.SQLiteProvider(db))
 ).catch(console.error);
-*/
+
 client.registry
   .registerGroup('math', 'Math')
   .registerDefaults()
   .registerTypesIn(path.join(__dirname, 'types'))
-  .registerCommandsIn(path.join(__dirname, 'commands'));
-
-client.login(token);
+  .registerCommandsIn(path.join(__dirname, 'commands'));*/
