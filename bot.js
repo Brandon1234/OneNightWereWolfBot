@@ -47,20 +47,23 @@ client.on('message', message => {
     return message.channel.send(reply);
   }
   	
-	testIncrement ++;
-	console.log(testIncrement + "\n");
-	/*try {
+	
+	try {
 		command.execute(message, args, playerList);
-		console.log("player list " + playerList[2]);
+		/*console.log("player list " + playerList[2]);
 		client.users.fetch(playerList[2], false).then((user) => {
 			///console.log(user);
 			user.send("This is a DM");
+			
 		});
-		
+		testIncrement ++;
+		console.log(testIncrement + "\n");
+		*/
+		console.log(playerList);
 	} catch (error) {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
-	}*/
+	}
 });
 
 client.login(token);
