@@ -6,8 +6,7 @@ const oneLine = require('common-tags').oneLine;
 const fs = require('fs')
 const {prefix, token} = require("./config.json");
 
-let playerList = ['Brandon', 'Kyra'];
-let testIncrement = 0;
+let playerList = [];
 
 const client = new Discord.Client();
 
