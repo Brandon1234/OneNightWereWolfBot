@@ -7,6 +7,7 @@ const fs = require('fs')
 const {prefix, token} = require("./config.json");
 
 let playerList = ['Brandon', 'Kyra'];
+let testIncrement = 0;
 
 const client = new Discord.Client();
 
@@ -45,13 +46,21 @@ client.on('message', message => {
   
     return message.channel.send(reply);
   }
-  let test = "can do";
-	try {
-		command.execute(message, args, playerList, test);
+  	
+	testIncrement ++;
+	console.log(testIncrement + "\n");
+	/*try {
+		command.execute(message, args, playerList);
+		console.log("player list " + playerList[2]);
+		client.users.fetch(playerList[2], false).then((user) => {
+			///console.log(user);
+			user.send("This is a DM");
+		});
+		
 	} catch (error) {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
-	}
+	}*/
 });
 
 client.login(token);
