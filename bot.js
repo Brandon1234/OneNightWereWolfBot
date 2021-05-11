@@ -42,6 +42,7 @@ client.on('message', message => {
     if (command.usage) {
       reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
     }
+	
   
     return message.channel.send(reply);
   }
@@ -64,5 +65,8 @@ client.on('message', message => {
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
+
+
 
 client.login(token);
